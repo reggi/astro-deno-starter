@@ -1,9 +1,10 @@
 {
   "tasks": {
     "yarn": "yarn --cwd ./astro",
-    "astro": "yarn --cwd ./astro astro",
-    "build": "yarn --cwd ./astro dev",
-    "dev": "deno task build & deno run --allow-env --allow-net=0.0.0.0:8000 --allow-read=dist/client --watch=main.ts ./main.ts",
-    "start": "deno run --allow-env --allow-net=0.0.0.0:8000 --allow-read=dist/client --watch=main.ts ./main.ts"
+    "build": "yarn --cwd ./astro build",
+    "dev:astro": "yarn --cwd ./astro dev",
+    "dev:deno": "deno run --allow-env --allow-net=0.0.0.0:8000 --allow-read=astro/dist --watch=main.ts ./main.ts",
+    "dev": "deno task dev:astro & deno task dev:deno",
+    "start": "deno run --allow-env --allow-net=0.0.0.0:8000 --allow-read=astro/dist ./main.ts"
   }
 }
