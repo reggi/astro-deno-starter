@@ -10,3 +10,6 @@ This differs in a couple of ways:
 3. Includes `deno.json` scripts
 4. `deno task dev` boots up both `astro dev` and `deno` server with file watching
 5. Changes `.gitignore` to includes astro-dist files in the source repo so deno can use them
+6. `deno task yarn` installs astro npm dependencies
+7. `deno task build` builds astro
+8. `deno task start` starts for production
