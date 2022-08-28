@@ -4,4 +4,4 @@ import { handle } from './astro/dist/server/entry.mjs';
 serve((req: Request) => {
   console.log(req)
   return handle(req);
-});
+}, { port: 8009 });

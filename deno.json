@@ -3,8 +3,9 @@
     "yarn": "yarn --cwd ./astro",
     "build": "yarn --cwd ./astro build",
     "dev:astro": "yarn --cwd ./astro dev",
-    "dev:deno": "deno run --allow-env --allow-net=0.0.0.0:8000 --allow-read=astro/dist --watch=main.ts ./main.ts",
-    "dev": "deno task dev:astro & deno task dev:deno",
-    "start": "deno run --allow-env --allow-net=0.0.0.0:8000 --allow-read=astro/dist ./main.ts"
+    "dev:deno": "deno run --allow-env --allow-net=0.0.0.0:8009 --allow-read=astro/dist --watch=./pages,main.ts ./main.ts",
+    "astro:watch": "deno run --allow-run --watch=./pages ./astro/watch.ts",
+    "dev": "deno task astro:watch & deno task dev:deno",
+    "start": "deno run --allow-env --allow-net=0.0.0.0:8009 --allow-read=astro/dist ./main.ts"
   }
 }
